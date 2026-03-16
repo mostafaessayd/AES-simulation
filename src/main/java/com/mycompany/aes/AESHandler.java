@@ -26,8 +26,30 @@ public class AESHandler {
         // init the latex code
         latexText
                 = "\\documentclass{article}\n"
+                + "\\usepackage[a4paper, margin=2cm]{geometry}\n"
                 + "\\usepackage{graphicx}\n"
                 + "\\begin{document}\n"
+                + "\\noindent\n"
+                + "\\begin{minipage}[t][1cm][b]{0.60\\textwidth}\n"
+                + "\\raggedright\n"
+                + "University of Science and Technology of Oran \\\\ \n"
+                + "Faculty of Mathematics and Computer Science \\\\ \n"
+                + "IT Department \\\\\n"
+                + "Prepared by Cidi Mohamed Mostepha and Khithri Nadjet\n"
+                + "\\end{minipage}%\n"
+                + "\\hfill\n"
+                + "\\begin{minipage}[t][1cm][b]{0.30\\textwidth}\n"
+                + "\\raggedleft\n"
+                + "\\includegraphics[width=3.2cm, keepaspectratio]{usto.png}\n"
+                + "\\end{minipage}\n"
+                + "\\vspace{0.3cm}\n"
+                + "\\hrule\n"
+                + "\n"
+                + "\\begin{center}\n"
+                + "\\Large\\textbf{Simulating Encryption Using the AES Algorithm}\n"
+                + "\\end{center}\n"
+                + "\n"
+                + "\\hrule"
                 + "\\subsection*{Exercice : You are given the next text}"
                 + text
                 + "\\subsection*{Required}\n"
@@ -296,9 +318,9 @@ public class AESHandler {
         subByte();
         shiftRows();
         latexText += "\\subsection*{Encrypted text : } ";
-        for(int i = 0 ; i < blocks.size() ; i++) {
-            for(int j = 0 ; j < 8 ; j += 2) {
-                for(int k = j ; k < 32 ; k += 8) {
+        for (int i = 0; i < blocks.size(); i++) {
+            for (int j = 0; j < 8; j += 2) {
+                for (int k = j; k < 32; k += 8) {
                     String subBlock = "";
                     subBlock += blocks.get(i).charAt(k);
                     subBlock += blocks.get(i).charAt(k + 1);
