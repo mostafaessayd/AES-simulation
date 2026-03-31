@@ -26,11 +26,11 @@ public class LatexHandler {
 //            Process process = Runtime.getRuntime().exec("pdflatex file.tex");
 //            process.waitFor();
             ProcessBuilder pb = new ProcessBuilder(
-                "C:\\Program Files\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+              "C:\\Program Files\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
                 "file.tex"
             );
 
-            pb.directory(new File("C:\\Users\\essay\\Documents\\NetBeansProjects\\AES"));
+            pb.directory(new File("C:\\Users\\H.E.S\\Desktop\\SR\\AES-simulation"));
 
             Process process = pb.start();
             process.waitFor();

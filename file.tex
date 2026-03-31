@@ -1,140 +1,130 @@
 \documentclass{article}
+\usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{graphicx}
 \begin{document}
-\subsection*{Exercice : You are given the next text}Good morning How Are You\subsection*{Required}
+\noindent
+\begin{minipage}[t][1cm][b]{0.60\textwidth}
+\raggedright
+University of Science and Technology of Oran \\ 
+Faculty of Mathematics and Computer Science \\ 
+IT Department \\
+Prepared by Cidi Mohamed Mostepha and Khithri Nadjet
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1cm][b]{0.30\textwidth}
+\raggedleft
+\includegraphics[width=3.2cm, keepaspectratio]{usto.png}
+\end{minipage}
+\vspace{0.3cm}
+\hrule
+
+\begin{center}
+\Large\textbf{Simulating Encryption Using the AES Algorithm}
+\end{center}
+
+\hrule\subsection*{Exercice : You are given the next text}i love you\subsection*{Required}
 \begin{itemize}
-    \item Encrypt the text using key YBxl8ir43vcIFlOZ
+    \item Encrypt the text using key lnfgR818aqnbjGGo
 \end{itemize}
 \subsection*{Solution}
 \begin{itemize}
     \item \textbf{Hex text :}\\
-\end{itemize}47 6f 6f 64 20 6d 6f 72 6e 69 6e 67 20 48 6f 77 20 41 72 65 20 59 6f 75 \begin{itemize}
+\end{itemize}69 20 6c 6f 76 65 20 79 6f 75 \begin{itemize}
     \item \textbf{convert text into states :}
 \end{itemize}\begin{tabular}{|c|c|c|c|}
-\hline 47 & 20 & 6e & 20 \\ \hline 6f & 6d & 69 & 48 \\ \hline 6f & 6f & 6e & 6f \\ \hline 64 & 72 & 67 & 77 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 20 & 20 & 00 & 00 \\ \hline 41 & 59 & 00 & 00 \\ \hline 72 & 6f & 00 & 00 \\ \hline 65 & 75 & 00 & 00 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 0 : }\begin{itemize}
+\hline 69 & 76 & 6f & 00 \\ \hline 20 & 65 & 75 & 00 \\ \hline 6c & 20 & 00 & 00 \\ \hline 6f & 79 & 00 & 00 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 0 : }\begin{itemize}
     \item \textbf{add round key} \\
 \end{itemize}\begin{itemize}
     \item \textbf{key state} \\
 \end{itemize}\begin{tabular}{|c|c|c|c|}
-\hline 59 & 38 & 33 & 46 \\ \hline 42 & 69 & 76 & 6c \\ \hline 78 & 72 & 63 & 4f \\ \hline 6c & 34 & 49 & 5a \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\\\begin{itemize}
+\hline 6c & 52 & 61 & 6a \\ \hline 6e & 38 & 71 & 47 \\ \hline 66 & 31 & 6e & 47 \\ \hline 67 & 38 & 62 & 6f \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\\\begin{itemize}
     \item \textbf{xor key with states :}
 \end{itemize}\begin{tabular}{|c|c|c|c|}
-\hline 1e & 18 & 5d & 66 \\ \hline 2d & 04 & 1f & 24 \\ \hline 17 & 1d & 0d & 20 \\ \hline 08 & 46 & 2e & 2d \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 79 & 18 & 33 & 46 \\ \hline 03 & 30 & 76 & 6c \\ \hline 0a & 1d & 63 & 4f \\ \hline 09 & 41 & 49 & 5a \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 1 : }\begin{itemize}
+\hline 05 & 24 & 0e & 6a \\ \hline 4e & 5d & 04 & 47 \\ \hline 0a & 11 & 6e & 47 \\ \hline 08 & 41 & 62 & 6f \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 1 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 72 & ad & 4c & 33 \\ \hline d8 & f2 & c0 & 36 \\ \hline f0 & a4 & d7 & b7 \\ \hline 30 & 5a & 31 & d8 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline b6 & ad & c3 & 5a \\ \hline 7b & 04 & 38 & 50 \\ \hline 67 & a4 & fb & 84 \\ \hline 01 & 83 & 3b & be \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 6b & 36 & ab & 02 \\ \hline 2f & 4c & f2 & a0 \\ \hline 67 & 82 & 9f & a0 \\ \hline 30 & 83 & aa & a8 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 72 & ad & 4c & 33 \\ \hline f2 & c0 & 36 & d8 \\ \hline d7 & b7 & f0 & a4 \\ \hline d8 & 30 & 5a & 31 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline b6 & ad & c3 & 5a \\ \hline 04 & 38 & 50 & 7b \\ \hline fb & 84 & 67 & a4 \\ \hline be & 01 & 83 & 3b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 6b & 36 & ab & 02 \\ \hline 4c & f2 & a0 & 2f \\ \hline 9f & a0 & 67 & 82 \\ \hline a8 & 30 & 83 & aa \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 4b & a8 & 35 & 76 \\ \hline 7a & 78 & 1d & c3 \\ \hline 1e & 58 & 51 & 23 \\ \hline 92 & 78 & 16 & 7f \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline f7 & 19 & 86 & ea \\ \hline f6 & 57 & 8c & 3a \\ \hline e2 & dd & 06 & 85 \\ \hline b3 & 78 & 80 & 4c \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 2 : }\begin{itemize}
+\hline 56 & 63 & 65 & a4 \\ \hline a0 & bf & 2e & 00 \\ \hline 7f & 04 & 28 & 89 \\ \hline 1d & b1 & 54 & 49 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 2 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline b3 & c2 & 96 & 38 \\ \hline da & bc & a4 & 2e \\ \hline 72 & 6a & d1 & 26 \\ \hline 4f & bc & 47 & d2 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 68 & d4 & 44 & 87 \\ \hline 42 & 5b & 64 & 80 \\ \hline 98 & c1 & 6f & 97 \\ \hline 6d & bc & cd & 29 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline b1 & fb & 4d & 49 \\ \hline e0 & 08 & 31 & 63 \\ \hline d2 & f2 & 34 & a7 \\ \hline a4 & c8 & 20 & 3b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline b3 & c2 & 96 & 38 \\ \hline bc & a4 & 2e & da \\ \hline d1 & 26 & 72 & 6a \\ \hline d2 & 4f & bc & 47 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 68 & d4 & 44 & 87 \\ \hline 5b & 64 & 80 & 42 \\ \hline 6f & 97 & 98 & c1 \\ \hline 29 & 6d & bc & cd \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline b1 & fb & 4d & 49 \\ \hline 08 & 31 & 63 & e0 \\ \hline 34 & a7 & d2 & f2 \\ \hline 3b & a4 & c8 & 20 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 7a & e4 & fa & bb \\ \hline 87 & 78 & d6 & c5 \\ \hline 48 & 3c & 2e & b5 \\ \hline 9e & 13 & 27 & cc \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline d2 & d3 & 1b & 65 \\ \hline 94 & e7 & ae & 20 \\ \hline 92 & dd & 27 & c9 \\ \hline cf & cb & 30 & 01 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 3 : }\begin{itemize}
+\hline 14 & 3a & 6f & 0f \\ \hline 79 & f9 & 66 & 5c \\ \hline 10 & 32 & 90 & 01 \\ \hline 7a & ed & 7c & 9c \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 3 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline da & 69 & 2d & ea \\ \hline 17 & bc & f6 & a6 \\ \hline 52 & eb & 31 & d5 \\ \hline 0b & 7d & cc & 4b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline b5 & 66 & af & 4d \\ \hline 22 & 94 & e4 & b7 \\ \hline 4f & c1 & cc & dd \\ \hline 8a & 1f & 04 & 7c \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline fa & 80 & a8 & 76 \\ \hline b6 & 99 & 33 & 4a \\ \hline ca & 23 & 60 & 7c \\ \hline da & 55 & 10 & de \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline da & 69 & 2d & ea \\ \hline bc & f6 & a6 & 17 \\ \hline 31 & d5 & 52 & eb \\ \hline 4b & 0b & 7d & cc \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline b5 & 66 & af & 4d \\ \hline 94 & e4 & b7 & 22 \\ \hline cc & dd & 4f & c1 \\ \hline 7c & 8a & 1f & 04 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline fa & 80 & a8 & 76 \\ \hline 99 & 33 & 4a & b6 \\ \hline 60 & 7c & ca & 23 \\ \hline de & da & 55 & 10 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline ce & 7b & ca & 0b \\ \hline 11 & 82 & e6 & 8e \\ \hline c3 & 5b & 01 & c4 \\ \hline b4 & 61 & 7b & 5f \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 6f & ea & 17 & a3 \\ \hline 1d & fa & ef & ed \\ \hline 49 & 60 & f4 & 42 \\ \hline 7a & 90 & d8 & df \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 4 : }\begin{itemize}
+\hline 46 & cb & 5c & 75 \\ \hline 91 & 31 & f5 & 03 \\ \hline 08 & b1 & 53 & 1f \\ \hline 18 & 93 & 0a & c0 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 4 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8b & 21 & 74 & 2b \\ \hline 82 & 13 & 8e & 19 \\ \hline 2e & 39 & 7c & 1c \\ \hline 8d & ef & 21 & cf \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a8 & 87 & f0 & 0a \\ \hline a4 & 2d & df & 55 \\ \hline 3b & d0 & bf & 2c \\ \hline da & 60 & 61 & 9e \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 5a & 1f & 4a & 9d \\ \hline 81 & c7 & e6 & 7b \\ \hline 30 & c8 & ed & c0 \\ \hline ad & dc & 67 & ba \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8b & 21 & 74 & 2b \\ \hline 13 & 8e & 19 & 82 \\ \hline 7c & 1c & 2e & 39 \\ \hline cf & 8d & ef & 21 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a8 & 87 & f0 & 0a \\ \hline 2d & df & 55 & a4 \\ \hline bf & 2c & 3b & d0 \\ \hline 9e & da & 60 & 61 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 5a & 1f & 4a & 9d \\ \hline c7 & e6 & 7b & 81 \\ \hline ed & c0 & 30 & c8 \\ \hline ba & ad & dc & 67 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 3e & 80 & 30 & 7b \\ \hline 37 & b2 & 31 & b2 \\ \hline 9a & b0 & 3d & 60 \\ \hline 84 & 9e & bc & 2a \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 39 & 0c & d0 & 30 \\ \hline 3c & 23 & 42 & 5e \\ \hline 02 & 72 & 6d & 65 \\ \hline 3e & 0c & 51 & 26 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 5 : }\begin{itemize}
+\hline 5d & 1c & 69 & ba \\ \hline 8b & 7f & 9a & b5 \\ \hline 72 & 4f & 1e & f6 \\ \hline b7 & 2f & 89 & bd \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 5 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline b2 & cd & 04 & 21 \\ \hline 9a & 37 & c7 & 37 \\ \hline b8 & e7 & 27 & d0 \\ \hline 5f & 0b & 65 & e5 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 12 & fe & 70 & 04 \\ \hline eb & 26 & 2c & 58 \\ \hline 77 & 40 & 3c & 4d \\ \hline b2 & fe & d1 & f7 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 4c & 9c & f9 & f4 \\ \hline 3d & d2 & b8 & d5 \\ \hline 40 & 84 & 72 & 42 \\ \hline a9 & 15 & a7 & 7a \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline b2 & cd & 04 & 21 \\ \hline 37 & c7 & 37 & 9a \\ \hline 27 & d0 & b8 & e7 \\ \hline e5 & 5f & 0b & 65 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 12 & fe & 70 & 04 \\ \hline 26 & 2c & 58 & eb \\ \hline 3c & 4d & 77 & 40 \\ \hline f7 & b2 & fe & d1 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 4c & 9c & f9 & f4 \\ \hline d2 & b8 & d5 & 3d \\ \hline 72 & 42 & 40 & 84 \\ \hline 7a & a9 & 15 & a7 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline ce & 72 & d7 & 31 \\ \hline 30 & 61 & 91 & 9d \\ \hline 14 & 8d & db & ea \\ \hline 31 & ff & 6c & 76 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a6 & a5 & f4 & 6f \\ \hline 1e & 81 & 12 & 34 \\ \hline 99 & f2 & 45 & 68 \\ \hline d1 & 49 & 17 & e5 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 6 : }\begin{itemize}
+\hline e1 & fa & f5 & 33 \\ \hline 95 & f5 & 96 & 74 \\ \hline 71 & d6 & b0 & e3 \\ \hline ba & 75 & 0c & a2 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 6 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8b & 40 & 0e & c7 \\ \hline 04 & ef & 81 & 5e \\ \hline fa & 5d & b9 & 87 \\ \hline c7 & 16 & 50 & 38 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 24 & 06 & bf & a8 \\ \hline 72 & 0c & c9 & 18 \\ \hline ee & 89 & 6e & 45 \\ \hline 3e & 3b & f0 & d9 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline f8 & 2d & e6 & c3 \\ \hline 2a & e6 & 90 & 92 \\ \hline a3 & f6 & e7 & 11 \\ \hline f4 & 9d & fe & 3a \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8b & 40 & 0e & c7 \\ \hline ef & 81 & 5e & 04 \\ \hline b9 & 87 & fa & 5d \\ \hline 38 & c7 & 16 & 50 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 24 & 06 & bf & a8 \\ \hline 0c & c9 & 18 & 72 \\ \hline 6e & 45 & ee & 89 \\ \hline d9 & 3e & 3b & f0 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline f8 & 2d & e6 & c3 \\ \hline e6 & 90 & 92 & 2a \\ \hline e7 & 11 & a3 & f6 \\ \hline 3a & f4 & 9d & fe \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 0a & cf & 8b & 4c \\ \hline 16 & 72 & cf & 9f \\ \hline f3 & 62 & 82 & 8a \\ \hline 4a & 9b & 16 & 7e \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 09 & 77 & f8 & b3 \\ \hline 44 & f7 & 0e & 12 \\ \hline f7 & 5f & f4 & 10 \\ \hline a7 & c7 & 1d & 51 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 7 : }\begin{itemize}
+\hline 7e & 6c & 9b & 79 \\ \hline ab & a9 & 58 & 94 \\ \hline 66 & 45 & 64 & e4 \\ \hline 04 & de & f9 & 8e \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 7 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 67 & 8a & 3d & 29 \\ \hline 47 & 40 & 8a & db \\ \hline 0d & aa & 13 & 7e \\ \hline d6 & 14 & 47 & f3 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 01 & f5 & 41 & 6d \\ \hline 1b & 68 & ab & c9 \\ \hline 68 & cf & bf & ca \\ \hline 5c & c6 & a4 & d1 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline f3 & 50 & 14 & b6 \\ \hline 62 & d3 & 6a & 22 \\ \hline 33 & 6e & 43 & 69 \\ \hline f2 & 1d & 99 & 19 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 67 & 8a & 3d & 29 \\ \hline 40 & 8a & db & 47 \\ \hline 13 & 7e & 0d & aa \\ \hline f3 & d6 & 14 & 47 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 01 & f5 & 41 & 6d \\ \hline 68 & ab & c9 & 1b \\ \hline bf & ca & 68 & cf \\ \hline d1 & 5c & c6 & a4 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline f3 & 50 & 14 & b6 \\ \hline d3 & 6a & 22 & 62 \\ \hline 43 & 69 & 33 & 6e \\ \hline 19 & f2 & 1d & 99 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 19 & b2 & aa & f8 \\ \hline 18 & 53 & 34 & 29 \\ \hline ab & 75 & 3a & 2e \\ \hline ed & ea & fd & 8c \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 1a & de & f1 & ed \\ \hline 84 & 27 & 07 & b5 \\ \hline 96 & e9 & fe & 53 \\ \hline cf & a9 & 1d & 94 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 8 : }\begin{itemize}
+\hline 63 & 17 & 86 & f3 \\ \hline 48 & e1 & 50 & 00 \\ \hline 6e & 4a & eb & b8 \\ \hline 76 & 50 & b7 & fe \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 8 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline d4 & 37 & ac & 41 \\ \hline ad & ed & 18 & a5 \\ \hline 62 & 9d & 80 & 31 \\ \hline 55 & 87 & 54 & 64 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a2 & 1d & a1 & 55 \\ \hline 5f & cc & c5 & d5 \\ \hline 90 & 1e & bb & ed \\ \hline 8a & d3 & a4 & 22 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline fb & f0 & 44 & 0d \\ \hline 52 & f8 & 53 & 63 \\ \hline 9f & d6 & e9 & 6c \\ \hline 38 & 53 & a9 & bb \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline d4 & 37 & ac & 41 \\ \hline ed & 18 & a5 & ad \\ \hline 80 & 31 & 62 & 9d \\ \hline 64 & 55 & 87 & 54 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a2 & 1d & a1 & 55 \\ \hline cc & c5 & d5 & 5f \\ \hline bb & ed & 90 & 1e \\ \hline 22 & 8a & d3 & a4 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline fb & f0 & 44 & 0d \\ \hline f8 & 53 & 63 & 52 \\ \hline e9 & 6c & 9f & d6 \\ \hline bb & 38 & 53 & a9 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline f0 & e4 & 94 & 8e \\ \hline 8b & 14 & 22 & 40 \\ \hline f4 & 1d & 91 & 36 \\ \hline e6 & d5 & da & 0b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 1c & 28 & 92 & ed \\ \hline 69 & 54 & 76 & c8 \\ \hline 29 & 82 & a9 & da \\ \hline f1 & 05 & a5 & 8e \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 9 : }\begin{itemize}
+\hline 4e & a4 & 6e & c6 \\ \hline 36 & 9f & 99 & aa \\ \hline 5b & aa & ae & 93 \\ \hline e6 & 47 & e7 & 3f \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 9 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8c & 69 & 22 & 19 \\ \hline 3d & fa & 93 & 09 \\ \hline bf & a4 & 81 & 05 \\ \hline 8e & 03 & 57 & 2b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 9c & 34 & 4f & 55 \\ \hline f9 & 20 & 38 & e8 \\ \hline a5 & 13 & d3 & 57 \\ \hline a1 & 6b & 06 & 19 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 2f & 49 & 9f & b4 \\ \hline 05 & db & ee & ac \\ \hline 39 & ac & e4 & dc \\ \hline 8e & a0 & 94 & 75 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 8c & 69 & 22 & 19 \\ \hline fa & 93 & 09 & 3d \\ \hline 81 & 05 & bf & a4 \\ \hline 2b & 8e & 03 & 57 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 9c & 34 & 4f & 55 \\ \hline 20 & 38 & e8 & f9 \\ \hline d3 & 57 & a5 & 13 \\ \hline 19 & a1 & 6b & 06 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 2f & 49 & 9f & b4 \\ \hline db & ee & ac & 05 \\ \hline e4 & dc & 39 & ac \\ \hline 75 & 8e & a0 & 94 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{mix columns :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline 78 & 66 & 71 & b1 \\ \hline 32 & 07 & 60 & 08 \\ \hline 54 & 92 & 54 & 0d \\ \hline 39 & 35 & e8 & 15 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline a7 & d6 & 10 & d3 \\ \hline 80 & 01 & 5a & d2 \\ \hline 7a & 6d & 68 & 4d \\ \hline f2 & 04 & 31 & 12 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 10 : }\begin{itemize}
+\hline 54 & d3 & 65 & af \\ \hline e0 & 18 & af & cb \\ \hline c2 & 01 & 45 & 2b \\ \hline 63 & ac & 33 & 33 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Round 10 : }\begin{itemize}
     \item \textbf{sub Byte :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline bc & 33 & a3 & c8 \\ \hline 23 & c5 & d0 & 30 \\ \hline 20 & 4f & 20 & d7 \\ \hline 12 & 96 & 9b & 59 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 5c & f6 & ca & 66 \\ \hline cd & 7c & be & b5 \\ \hline da & 3c & 45 & e3 \\ \hline 89 & f2 & c7 & c9 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
+\hline 20 & 66 & 4d & 79 \\ \hline e1 & ad & 79 & 1f \\ \hline 25 & 7c & 6e & f1 \\ \hline fb & 91 & c3 & c3 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{itemize}
     \item \textbf{shift rows :}
 \end{itemize} \begin{tabular}{|c|c|c|c|}
-\hline bc & 33 & a3 & c8 \\ \hline c5 & d0 & 30 & 23 \\ \hline 20 & d7 & 20 & 4f \\ \hline 59 & 12 & 96 & 9b \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\begin{tabular}{|c|c|c|c|}
-\hline 5c & f6 & ca & 66 \\ \hline 7c & be & b5 & cd \\ \hline 45 & e3 & da & 3c \\ \hline c9 & 89 & f2 & c7 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Encrypted text : } bc33a3c8c5d0302320d7204f5912969b5cf6ca667cbeb5cd45e3da3cc989f2c7\end{document}
+\hline 20 & 66 & 4d & 79 \\ \hline ad & 79 & 1f & e1 \\ \hline 6e & f1 & 25 & 7c \\ \hline c3 & fb & 91 & c3 \\ \hline \end{tabular}\hspace{0.5cm}\vspace{0.1cm}\subsection*{Encrypted text : } 20664d79ad791fe16ef1257cc3fb91c3\end{document}

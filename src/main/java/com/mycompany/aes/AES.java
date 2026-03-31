@@ -20,13 +20,13 @@ public class AES {
                 + "Encryption techniques protect sensitive information.\n"
                 + "Projects help students apply what they learn in practice.\n"
                 + "Continuous learning is essential in the world of technology.\n";
-        text = "Good morning How Are You";
+        text = "i love you";
         String KEY = KeyGeneratorUtil.generateKey(16);
         AESHandler handler = new AESHandler(text, KEY);
         handler.AESEncrypting();
 
         String solution = handler.getLatexSolution();
-        System.out.println(solution);
+        System.out.println(solution); 
         LatexHandler latexHandler = new LatexHandler(solution);
         latexHandler.generatePDF();
     }
